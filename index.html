@@ -425,21 +425,21 @@
                 </div>
                 <div class="contact-form">
                     <h3>Send Me a Message</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://sheetdb.io/api/v1/32tsnfhn669m7" method="post">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="data[name]" required>
                             <label for="name">Your Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="data[email]" required>
                             <label for="email">Your Email</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="data[subject]" required>
                             <label for="subject">Subject</label>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="data[message]" rows="5" required></textarea>
                             <label for="message">Your Message</label>
                         </div>
                         <button type="submit" class="btn btn-primary" aria-label="send message">Send Message</button>
