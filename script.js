@@ -254,3 +254,14 @@ document.addEventListener('click', (e) => {
     // Update Copyright Year
     document.getElementById('year').textContent = new Date().getFullYear();
 });
+let url ='https://script.google.com/macros/s/AKfycbyEINCJDLFmz5XFGOKAA4TwjV6MdloaX_AoJoHvyCxR0zb5F8oOYOgnRv6EdPWJ391O/exec';
+let form = document.getElementById('contactForm');
+form.addEventListener('submit', function(e) {
+    let d = new FormData(form);
+    fetch(url, {
+        method: 'POST',
+        body: d
+    }).then((res) =>res.text())
+    .then((finalRes)=>console.log(finalRes))
+    e.preventDefault();
+})
